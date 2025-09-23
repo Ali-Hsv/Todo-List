@@ -14,6 +14,17 @@ function App() {
     setTodos([...todos.filter((todo)=> todo.id!==todoId)]);
   }
 
+  const updateTodo = (newTodo) =>{
+    todos.map((todo)=>{
+      if(todo.id !== newTodo){
+        return todo;
+      }
+      else{
+        return newTodo;
+      }
+    })
+  }
+
   return (
     <div className='w-full h-dvh flex justify-start items-center flex-col bg-slate-400'>
       <TodoCreate onCreateTodo = {createTodo} />
