@@ -15,7 +15,7 @@ function App() {
   return (
     <div className='w-full h-dvh flex justify-start items-center flex-col bg-slate-400'>
       <TodoCreate onCreateTodo = {createTodo} />
-      <TodoList />
+      <TodoList todos={todos} />
     </div> 
   )
 }
