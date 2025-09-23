@@ -4,11 +4,17 @@ import TodoCreate from './components/TodoCreate'
 import TodoList from './components/TodoList'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [todos, setTodos] = useState([]);
+
+  const createTodo = (newTodo)=>{
+    setTodos([...todos, newTodo])
+  }
+
+  console.log(todos);
 
   return (
     <div className='w-full h-dvh flex justify-start items-center flex-col bg-slate-400'>
-      <TodoCreate />
+      <TodoCreate onCreateTodo = {createTodo} />
       <TodoList />
     </div> 
   )

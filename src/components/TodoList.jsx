@@ -3,7 +3,7 @@ import Todo from './Todo'
 
 function TodoList() {
   return (
-    <div>
+    <div className='flex flex-col gap-4'>
         <Todo/>
     </div>
   )
