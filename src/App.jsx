@@ -14,21 +14,22 @@ function App() {
     setTodos([...todos.filter((todo)=> todo.id!==todoId)]);
   }
 
-  const updateTodo = (newTodo) =>{
-    todos.map((todo)=>{
-      if(todo.id !== newTodo){
+  const updateTodo = (editTodo) =>{
+    const upadetTodo = todos.map((todo)=>{
+      if(todo.id !== editTodo.id){
         return todo;
       }
       else{
-        return newTodo;
+        return editTodo;
       }
-    })
+    });
+    setTodos([...upadetTodo])
   }
 
   return (
     <div className='w-full h-dvh flex justify-start items-center flex-col bg-slate-400'>
       <TodoCreate onCreateTodo = {createTodo} />
-      <TodoList todos={todos} onRemoveTodo={removeTodo}/>
+      <TodoList todos={todos} onRemoveTodo={removeTodo} onUpdatedTodo={updateTodo}/>
     </div> 
   )
 }
