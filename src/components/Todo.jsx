@@ -1,10 +1,7 @@
 import React, { useState } from 'react'
 import { MdEdit } from "react-icons/md";
 import { IoRemoveCircleOutline } from "react-icons/io5";
-import { IoCheckmarkCircleOutline  } from "react-icons/io5";
-
-
-
+import { IoCheckmarkCircleOutline  } from "react-icons/io5";  
 
 function Todo({todo, onRemoveTodo, onUpdatedTodo}) {
 
